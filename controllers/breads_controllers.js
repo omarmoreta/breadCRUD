@@ -4,7 +4,10 @@ const Bread = require("../models/breads");
 
 // INDEX
 breads.get("/", (req, res) => {
-  res.send("This is the index at /breads");
+  res.render("index", {
+    breads: Bread,
+  });
+  //   res.send("This is the index at /breads");
 });
 
 // SHOW
